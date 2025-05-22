@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+         tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        fadeIn: "fadeIn 1.5s ease-in-out",
+                        lineAnim: "lineGrow 1.5s ease forwards"
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' }
+                        },
+                        lineGrow: {
+                            '0%': { width: '0%' },
+                            '100%': { width: '100%' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+        <header>
+            <div class="navbar">
+                <div class="logo">Criminal Activity Detection</div>
+                <nav >
+                    <a class="hover:cursor-pointer" href="#home-section">Home</a>
+                    <a class="hover:cursor-pointer" href="#teams">Teams</a>
+                    <a class="hover:cursor-pointer" href="#features-heading">Features</a>
+                </nav>
+            </div>
+        </header>
+
+<section id="home-section">
+    <div class="carousel">
+        <div class="list">
+            <div class="item">
+                <img  style="border-radius:7px" src="{{ url_for('static', filename='images/img1.png') }}" alt="Image">">
+                <div class="introduce">
+                    <div class="title">TECH STACK</div>
+                    <div class="topic">Machine Learning</div>
+                    <div class="des">
+                        
+                        This project utilizes advanced machine learning algorithms to detect criminal activities in real-time.
+                    </div>
+                    <button class="seeMore">SEE MORE &#8599</button>
+                </div>
+                <div class="detail">
+                    <div class="title">Machine Learning</div>
+                    <div class="des">
+                        
+                        Our system is built using Python and various ML libraries such as TensorFlow, Keras, and Scikit-learn. It processes video feeds to identify suspicious activities.
+                    </div>
+                    <div class="specifications">
+                        <div>
+                            <p>Algorithm</p>
+                            <p>YOLO V8</p>
+                        </div>
+                        <div>
+                            <p>Lanuguage</p>
+                            <p>Python</p>
+                        </div>
+                        <div>
+                            <p>Library</p>
+                            <p>Numpy & Pandas</p>
+                        </div>
+                        <div>
+                            <p>Framework</p>
+                            <p>TensorFlow</p>
+                        </div>
+                        <div>
+                            <p>Controlled</p>
+                            <p>Touch</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button>KNOW MORE</button>
+                        <button>CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item"><img  style="border-radius:7px" src="{{ url_for('static', filename='images/img2.png') }}" alt="Image">
+                <div class="introduce">
+                    <div class="title">TECH STACK</div>
+                    <div class="topic">Front-End</div>
+                    <div class="des">
+                        The frontend is designed to provide a user-friendly interface for monitoring and reporting activities.
+                    </div>
+                    <button class="seeMore">SEE MORE &#8599</button>
+                </div>
+                <div class="detail">
+                    <div class="title">Frontend Development</div>
+                    <div class="des">
+                        We used HTML, CSS, and JavaScript along with Tailwind CSS for styling. The interface is responsive and easy to navigate.
+                    </div>
+                    <div class="specifications">
+                        <div>
+                            <p>Framework</p>
+                            <p>Tailwind CSS</p>
+                        </div>
+                        <div>
+                            <p>Language</p>
+                            <p>JavaScript</p>
+                        </div>
+                        <div>
+                            <p>Library</p>
+                            <p>React</p>
+                        </div>
+                        <div>
+                            <p>Design</p>
+                            <p>Responsive</p>
+                        </div>
+                        <div>
+                            <p>Tools</p>
+                            <p>Webpack, Babel</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button>KNOW MORE</button>
+                        <button>CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/img3.png') }}">
+                <div class="introduce">
+                    <div class="title">TECH STACK</div>
+                    <div class="topic">Backend Development</div>
+                    <div class="des">
+                        The backend handles data processing, storage, and serves the frontend with necessary data.
+                    </div>
+                    <button class="seeMore">SEE MORE &#8599</button>
+                </div>
+                <div class="detail">
+                    <div class="title">Backend Development</div>
+                    <div class="des">
+                        Built using Flask, the backend integrates with the machine learning models and manages the database operations.
+                    </div>
+                    <div class="specifications">
+                        <div>
+                            <p>Framework</p>
+                            <p>Flask</p>
+                        </div>
+                        <div>
+                            <p>Language</p>
+                            <p>Python</p>
+                        </div>
+                        <div>
+                            <p>Database</p>
+                            <p>PostgreSQL</p>
+                        </div>
+                        <div>
+                            <p>API</p>
+                            <p>RESTful</p>
+                        </div>
+                        <div>
+                            <p>Deployment</p>
+                            <p>Docker</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button>KNOW MORE</button>
+                        <button>CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/img4.png') }}">
+                <div class="introduce">
+                    <div class="title">TECH STACK</div>
+                    <div class="topic">Data Processing</div>
+                    <div class="des">
+                
+                        Efficient data processing pipelines ensure real-time analysis and reporting.
+                    </div>
+                    <button class="seeMore">SEE MORE &#8599</button>
+                </div>
+                <div class="detail">
+                    <div class="title">Data Processing</div>
+                    <div class="des">
+                        We use Pandas and NumPy for data manipulation and analysis. The processed data is then used for generating reports.
+                    </div>
+                    <div class="specifications">
+                        <div>
+                            <p>Libraries</p>
+                            <p>Pandas, NumPy</p>
+                        </div>
+                        <div>
+                            <p>Data Format</p>
+                            <p>JSON, CSV</p>
+                        </div>
+                        <div>
+                            <p>Tools</p>
+                            <p>Jupyter Notebook</p>
+                        </div>
+                        <div>
+                            <p>Visualization</p>
+                            <p>Matplotlib, Seaborn</p>
+                        </div>
+                        <div>
+                            <p>Reporting</p>
+                            <p>PDF, Excel</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button>KNOW MORE</button>
+                        <button>CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="arrows">
+            <button id="prev"> < </button>
+            <button id="next"> > </button>
+            <button id="back">See All  &#8599</button>
+        </div>
+    </div>
+</section>
+ 
+
+<section  id="teams" class="m">
+    <!-- <div class="heading-container text-center relative"> -->
+        <div class=" p-20 heading-container text-center relative flex flex-col items-center">
+            <h1 id="about-heading" class="heading text-4xl font-bold text-gray-900 opacity-0 transition-opacity duration-700 whitespace-nowrap">
+                About Teams
+            </h1>
+            <div class="line-animation h-0.5 w-0 bg-gray-800 mt-2"></div>
+        </div>
+        <div class="w">
+            <div class="i">
+                <p>Gaurav  Rawat (ML & AI)</p>
+                <img src="{{ url_for('static', filename='images/gaurav.jpg') }}" alt="">
+            </div>
+        </div>
+
+        <div class="w">
+            <div class="i">
+                <p>Kritvik Jubli (FrontEnd & Data Processing)</p>
+                <img src="{{ url_for('static', filename='images/kritvikjubli.jpg') }}" alt="#">
+            </div>
+        </div>
+
+        <div class="w">
+            <div class="i">
+                <p>Ananat (BackEnd)</p>
+                <img src="{{ url_for('static', filename='images/anant.jpg') }}" alt="">
+            </div>
+        </div>
+        <!-- <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const heading = document.getElementById("about-heading");
+                const line = document.querySelector(".line-animation");
+        
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            heading.classList.add("opacity-100");
+                            line.style.width = "100px"; 
+                            line.style.transition = "width 1.5s ease-in-out";
+                            line.style.margin = "0 auto"; 
+                        }
+                    });
+                }, { threshold: 0.5 });
+        
+                observer.observe(heading);
+            });
+        </script> -->
+    </section>
+    <!-- Features Section -->
+
+    <section id="features-section" class="min-h-screen p-10 flex flex-col items-center w-full bg-gray-100">
+        <div class="p-20 heading-container text-center relative flex flex-col items-center">
+            <h2 id="features-heading" class="text-4xl font-bold text-center text-gray-800 mb-8 opacity-0 transition-opacity duration-700">
+                Live Detection & Reports
+            </h2>
+            <div class="line-animation h-0.5 w-0 bg-gray-800 mt-2 mx-auto"></div>
+        </div>
+
+        <!-- Video Section -->
+
+        <div class="relative mt-10 flex flex-col items-center w-full">
+            <h1 class="text-2xl font-semibold text-gray-700 mb-4">Live Video Feed</h1>
+            <p class="text-center text-gray-600 mb-4">Our system provides a live video feed to monitor activities in real-time. The video feed is processed using advanced machine learning algorithms to detect any suspicious activities.</p>
+            <p class="text-center text-gray-600 mb-4">Click the video below to start and choose the mode of analysis.</p>
+            <div class="relative w-full max-w-4xl">
+                <div id="video-cover" class="absolute inset-0 bg-green-500 flex items-center justify-center cursor-pointer">
+                    <span class="text-white text-2xl">Start Video</span>
+                </div>
+                <img id="video-feed" src="{{ url_for('video_feed') }}" class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+        </div>
+
+        <!-- Analysis Option -->
+
+        <div class="mt-8 w-full flex justify-center space-x-4">
+            <button id="live-analysis" class="px-8 py-3 text-lg bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            Live Video Analysis
+            </button>
+            <button id="pre-recorded-analysis" class="px-8 py-3 text-lg bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            Pre-recorded Video Analysis
+            </button>
+        </div>
+
+        <!-- File Upload for Pre-recorded Analysis -->
+
+        <div id="file-upload-section" class="mt-8 w-full flex flex-col items-center hidden">
+            <input type="file" id="file-upload" class="px-8 py-3 text-lg bg-gray-200 text-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            <button id="upload-file" class="ml-4 px-8 py-3 text-lg bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 mt-4">
+            Upload and Analyze
+            </button>
+            <div id="upload-progress" class="w-full max-w-xl mt-4 hidden">
+            <div class="bg-gray-200 rounded-full h-4">
+                <div id="progress-bar" class="bg-blue-600 h-4 rounded-full" style="width: 0%;"></div>
+            </div>
+            <span id="progress-text" class="text-gray-600 mt-2"></span>
+            </div>
+        </div>
+
+
+        <div class="mt-8 w-full flex justify-center"></div>
+            <button onclick="window.location.href='/generate_report'" id="generate-report" class="px-8 py-3 text-lg bg-red-600 hover:bg-red-700 text-white rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            Generate Report
+            </button>
+        </div>
+        </section>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", () => {
+        const heading = document.getElementById("features-heading");
+        const line = document.querySelector(".line-animation");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    heading.classList.add("opacity-100");
+                    line.style.width = "100px"; 
+                    line.style.transition = "width 1.5s ease-in-out";
+                    line.style.display = "block"; 
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(heading);
+    });
+        document.getElementById('video-cover').addEventListener('click', function() {
+            document.getElementById('video-cover').style.display = 'none';
+            window.scrollTo({
+                top: document.getElementById('live-analysis').offsetTop,
+                behavior: 'smooth'
+            });
+        });
+
+        document.getElementById('live-analysis').addEventListener('click', function() {
+            alert('Starting live video analysis...');
+        });
+
+        document.getElementById('pre-recorded-analysis').addEventListener('click', function() {
+            document.getElementById('file-upload-section').classList.remove('hidden');
+        });
+
+        document.getElementById('upload-file').addEventListener('click', function() {
+            const fileInput = document.getElementById('file-upload');
+            if (fileInput.files.length === 0) {
+                alert('Please select a file to upload.');
+                return;
+            }
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/upload_and_analyze', true);
+
+            xhr.upload.addEventListener('progress', function(e) {
+                if (e.lengthComputable) {
+                    const percentComplete = (e.loaded / e.total) * 100;
+                    document.getElementById('progress-bar').style.width = percentComplete + '%';
+                    document.getElementById('progress-text').innerText = Math.round(percentComplete) + '% uploaded';
+                    document.getElementById('upload-progress').classList.remove('hidden');
+                }
+            });
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    alert('File uploaded and analysis started.');
+                    const videoElement = document.getElementById('video-feed');
+                    videoElement.src = URL.createObjectURL(file);
+                    document.getElementById('video-cover').style.display = 'none';
+                    document.getElementById('upload-progress').classList.add('hidden');
+                } else {
+                    alert('Error uploading file.');
+                }
+            };
+
+            xhr.send(formData);
+        });
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>   
+    <script src="app.js"></script>
